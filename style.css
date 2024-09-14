@@ -1,5 +1,5 @@
-
 body{
+    margin: 0px;
     background-color: rgb(0, 0, 0);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,25 +8,25 @@ body{
 }
 
 #logo{
-    margin:0px;
+    margin:10px;
     padding: 10px;
     font-family: "Fredoka One", sans-serif;
     box-shadow: 2px 2px 10px 5px rgb(126, 17, 17);
     width: 30%;
     border-radius: 45%;
+    text-align: center;
 }
 
-ul{
-    margin: 0px;
-}
-
-body>header{
-    background-color: rgb(240, 96, 96);
+header{
+    padding: 50px;
+    background-color: rgb(210, 20, 20);
     color: black;
+    text-align: center;
+    grid-area: header ;
     display: flex;
     height: 10vh;
     align-items: center;
-    justify-content: space-around ;
+    justify-content: space-around;
 }
 
 #nav-ul{
@@ -38,11 +38,6 @@ body>header{
     margin: 16px;
 }
 
-body > header > nav > ul { 
-    list-style: none;
-    text-decoration: none;
-}
-
 .navbutton{
     color: white;
     text-decoration: none;
@@ -51,50 +46,62 @@ body > header > nav > ul {
     border-radius: 15px;
 }
 
-body > main article{
-    width: 70%;
-    margin: auto;   
+
+
+#menu{
+    padding: 32px;
+    background-color: white;
+    grid-area: menu;
 }
+
+nav{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-flow: column ;
+}
+
+
 
 #main-content{
-    display: flex;
-    justify-content: space-around;
+    padding: 34px;
+    grid-area: main ;
+    background-color: black;
+    color:white;
+    display: grid;
+    grid-template-areas:
+    "empty chef music"
+    "text chef-text music-text ";
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
-#main-content > div{
-    width: 70%;
-
+#other-section{
+    padding: 40px;
+    display: grid;
+    grid-template-areas:
+    "adventure workout fashion"
+    "adventure-text workout-text fashion-text "
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-form{
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-body > footer {
-    background-color: rgb(255, 188, 64);
-    display: flex;
-}
-
-img{
-    border-radius: 50%;
-}
-
-#footer-ul{
-    display: flex;
-    list-style: none;
-}
-
-#footer-ul > div > li{
-    margin-left: 12px ;
-}
-
-#footer-ul > div > li > a{
+footer{
+    padding: 16px ;
+    background-color: orange;
     color: white;
-    text-decoration: none;
+    text-align: center;
+    grid-area: footer; 
+}
 
+#grid-container{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu main"
+    " menu other-section"
+    "footer footer"
+    ;
+    grid-template-columns: 1fr 9fr;
 }
 
